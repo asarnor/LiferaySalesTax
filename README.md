@@ -1,2 +1,55 @@
-# LiferaySalesTax
-Sales Taxes Coding Problem
+# react.js Coding Problem: Sales Taxes
+
+example of shopping cart implemented in react.js and redux.js to calculate sales tax
+
+## getting started
+
+install dependencies and start local dev server
+
+```sh
+npm install
+npm start
+```
+
+## details
+- build with [create react app](https://github.com/facebookincubator/create-react-app). Check their page for more details.
+- this example is using redux.js for application state management, to learn more about it I recommend [this tutorial](https://egghead.io/courses/getting-started-with-redux).
+- you can look under the hood directly from your browser using [redux devtools](https://github.com/zalmoxisus/redux-devtools-extension). Install extension for your browser, open demo page (link above) and see how app state changes when you interact with it.
+- if you wonder why reducers, actions and selectors are all in one file inside folder called `ducks`, [read more here](https://github.com/erikras/ducks-modular-redux).
+
+Basic sales tax is applicable at a rate of 10% on all goods, except books, food, and medical products that are exempt. Import duty is an additional sales tax applicable on all imported goods at a rate of 5%, with no exemptions.
+When I purchase items, I receive a receipt which lists the name of all the items and their price (including tax), finishing with the total cost of the items, and the total amounts of sales taxes paid. The rounding rules for sales tax are that for a tax rate of n%, a shelf price of p contains (np/100 rounded up to the nearest 0.05) amount of sales tax.
+
+## INPUT
+- INPUT
+Input 1:
+1 book at 12.49
+1 music CD at 14.99
+1 chocolate bar at 0.85
+Input 2:
+1 imported box of chocolates at 10.00 1 imported bottle of perfume at 47.50
+Input 3:
+1 imported bottle of perfume at 27.99 1 bottle of perfume at 18.99
+1 packet of headache pills at 9.75
+1 imported box of chocolates at 11.25
+
+## OUTPUT
+- OUTPUT
+Output 1:
+1 book: 12.49
+1 music CD: 16.49
+1 chocolate bar: 0.85 Sales Taxes: 1.50 Total: 29.83
+
+Output 2:
+1 imported box of chocolates: 10.50 1 imported bottle of perfume: 54.65 Sales Taxes: 7.65
+Total: 65.15
+
+Output 3:
+1 imported bottle of perfume: 32.19 1 bottle of perfume: 20.89
+1 packet of headache pills: 9.75
+1 imported box of chocolates: 11.85 Sales Taxes: 6.70
+Total: 74.68
+
+* * *
+author: Abdul Sarnor   
+licence: MIT
