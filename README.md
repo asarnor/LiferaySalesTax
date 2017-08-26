@@ -12,10 +12,7 @@ npm start
 ```
 
 ## details
-- build with [create react app](https://github.com/facebookincubator/create-react-app). Check their page for more details.
-- this example is using redux.js for application state management, to learn more about it I recommend [this tutorial](https://egghead.io/courses/getting-started-with-redux).
-- you can look under the hood directly from your browser using [redux devtools](https://github.com/zalmoxisus/redux-devtools-extension). Install extension for your browser, open demo page (link above) and see how app state changes when you interact with it.
-- if you wonder why reducers, actions and selectors are all in one file inside folder called `ducks`, [read more here](https://github.com/erikras/ducks-modular-redux).
+You can update the data or modify the data in src/data/products.js
 
 Basic sales tax is applicable at a rate of 10% on all goods, except books, food, and medical products that are exempt. Import duty is an additional sales tax applicable on all imported goods at a rate of 5%, with no exemptions.
 When I purchase items, I receive a receipt which lists the name of all the items and their price (including tax), finishing with the total cost of the items, and the total amounts of sales taxes paid. The rounding rules for sales tax are that for a tax rate of n%, a shelf price of p contains (np/100 rounded up to the nearest 0.05) amount of sales tax.
