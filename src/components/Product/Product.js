@@ -16,7 +16,6 @@ class Product extends Component {
             name,
             price,
             currency,
-            image,
             url,
             isInCart
         } = this.props;
@@ -48,7 +47,6 @@ Product.propTypes = {
     name: PropTypes.string.isRequired,
     price: PropTypes.number,
     currency: PropTypes.string,
-    image: PropTypes.string,
     url: PropTypes.string,
     isInCart: PropTypes.bool.isRequired,
     addToCart: PropTypes.func.isRequired,

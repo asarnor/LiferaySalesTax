@@ -1,3 +1,6 @@
+import taxRates from './taxrate';
+
+/* set products here */
 const data = [
     {
         "id": 4,
@@ -75,20 +78,14 @@ const data = [
 ];
 
 const taxlogic = (item) => {
-    let salesTax = 0;
-    if (item.import) {
-        salesTax = 0.05;
-    }
-    if (item.basic) {
-        salesTax = 0.10;
-    }
-    if (item.basic && item.import) {
-        salesTax = 0.15;
-    }
+    let salesTax = taxRates(item.basic, item.import);
 
     item.tax = Math.ceil((item.price * salesTax) / 0.05) * 0.05; // the the correct sales tax amount
+
     item.fullPrice = item.tax + item.price; // get the full price
     item.fullPrice = Number(item.fullPrice).toFixed(2); // format
+
+    item.tax = Number(item.tax).toFixed(2); // format
     return item;
 }
 

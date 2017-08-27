@@ -15,7 +15,7 @@ const CartItem = ({name, fullPrice, currency}) => {
 
 CartItem.propTypes = {
     name: PropTypes.string.isRequired,
-    fullPrice: PropTypes.number.isRequired,
+    fullPrice: PropTypes.string.isRequired,
     currency: PropTypes.string.isRequired
 }
 

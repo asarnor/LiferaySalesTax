@@ -65,15 +65,15 @@ export function getCurrency(state, props) {
 }
 
 export function getTotal(state, props) {
-    return state.cart.items.reduce((acc, id) => {
+    return Number(state.cart.items.reduce((acc, id) => {
         const item = getProduct(state, {id});
         return acc + Number(item.fullPrice);
-    }, 0).toFixed(2);
+    }, 0).toFixed(2));
 }
 
 export function getTotalTax(state, props) {
-    return state.cart.items.reduce((acc, id) => {
+    return Number(state.cart.items.reduce((acc, id) => {
         const item = getProduct(state, {id});
         return acc + Number(item.tax);
-    }, 0).toFixed(2);
+    }, 0).toFixed(2));
 }
