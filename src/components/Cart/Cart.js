@@ -1,5 +1,6 @@
 import React, {PropTypes} from 'react';
 import CartItem from './CartItem';
+const formatCurrency = require('format-currency')
 
 const Cart = ({items, total, currency, taxes}) => {
     return (
@@ -20,8 +21,8 @@ const Cart = ({items, total, currency, taxes}) => {
                         {items.length === 0 && (
                             <div className="alert alert-info">Cart is empty</div>
                         )}
-                        <div className="cart__taxes">Sales Tax: ${taxes} {currency}</div>
-                        <div className="cart__taxes">Total: $<b>{total}</b>
+                        <div className="cart__taxes">Sales Tax: ${ formatCurrency(taxes) } {currency}</div>
+                        <div className="cart__taxes">Total: $<b>{ formatCurrency(total) }</b>
                         {currency}</div>
                     </div>
                 </div>
