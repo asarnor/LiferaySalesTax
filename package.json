@@ -22,7 +22,7 @@
         "eject": "react-scripts eject",
         "predeploy": "npm run build",
         "deploy": "gh-pages -d build",
-        "postinstall": "npm run build"
+        "postinstall": "react-scripts build"
     },
     "eslintConfig": {
         "extends": "react-app"
@@ -31,7 +31,6 @@
         "node": "8.4.0",
         "npm": "5.3.0"
     },
-    "main": "server.js",
     "requiresKeyFile": true,
     "requiresProjectId": true
 }
